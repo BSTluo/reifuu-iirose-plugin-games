@@ -55,10 +55,15 @@ intervalTry(() =>
     });
     pageListObserver.observe(msgDom, { characterData: true, childList: true, subtree: true });
 
+    // 创建主页面菜单，干，我明天一定要给它分多个文件
     const menu = document.createElement('div');
+    
     menu.style.width = '97vw';
     menu.style.height = '85vh';
-    menu.style.background = '#66ccff';
+    menu.style.background = '#333333';
+    menu.style.display = 'flex';
+
+
 
     msgDom.append(menu)
 });
