@@ -22,7 +22,7 @@ export default files.map(file => ({
   plugins: [
     resolve(), // 解析第三方模块
     commonjs(), // 将 CommonJS 模块转换为 ES6 模块
-    typescript({ tsconfig: './tsconfig.json', tsconfigOverride: override }),
+    // typescript({ tsconfig: './tsconfig.json', tsconfigOverride: override }),
     nodePolyfills(),
     server({
       contentBase: [outputDir],
