@@ -17,7 +17,7 @@ export default files.map(file => ({
   output: {
     dir: outputDir,
     format: 'umd',
-    name: 'reifuuPluginCore'
+    name: 'games'
   },
   plugins: [
     resolve(), // 解析第三方模块
