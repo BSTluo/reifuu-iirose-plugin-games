@@ -1,14 +1,17 @@
 // 构建一个创建按钮的函数
 export const makeButton = (text) =>
 {
-    const button = document.createElement('div');
+    const button = document.createElement('button');
     button.style.width = "100%";
+    button.style.height='20%'
     button.innerHTML = text;
     button.style.fontSize = '3vw';
     button.style.color = 'white';
     button.style.display = 'flex';
     button.style.justifyContent = 'center';
     button.style.alignItems = 'center';
+    button.style.transition = '1s';
+
     button.addEventListener('mousemove', () =>
     {
         button.style.fontSize = '4vw';
