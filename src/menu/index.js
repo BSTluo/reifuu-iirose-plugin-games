@@ -1,7 +1,7 @@
-import { makeButton } from "./button";
+import { makeButton } from "../button";
+import { switchDom } from "..";
 
-export const makeMenu = () =>
-{
+export const makeMenu = () => {
   // 创建主页面菜单
   const menu = document.createElement('div');
   menu.style.width = '97vw';
@@ -34,13 +34,13 @@ export const makeMenu = () =>
   menuButton.style.flexDirection = 'column';
 
   // 创建第一个按钮（进入房间）
-  const joinRoom = makeButton('1. 进入房间');
+  const joinRoom = makeButton('1. 进入房间', () => { switchDom(); });
 
   // 创建第二个按钮（创建房间）
-  const createRoom = makeButton('2. 创建房间');
+  const createRoom = makeButton('2. 创建房间', () => { switchDom(); });
 
   // 创建第三个按钮（游玩说明）
-  const playInfo = makeButton('3. 游玩说明');
+  const playInfo = makeButton('3. 游玩说明', () => { switchDom(); });
 
   menuButton.append(joinRoom);
   menuButton.append(createRoom);
