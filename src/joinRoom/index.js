@@ -21,4 +21,6 @@ export const joinRoomDom = () => {
 
   logo.append(logoImg);
   menu.append(logo);
+
+  return menu
 }

@@ -1,5 +1,6 @@
 import { makeButton } from "../button";
 import { switchDom } from "..";
+import { joinRoomDom } from "../joinRoom";
 
 export const makeMenu = () => {
   // 创建主页面菜单
@@ -34,7 +35,7 @@ export const makeMenu = () => {
   menuButton.style.flexDirection = 'column';
 
   // 创建第一个按钮（进入房间）
-  const joinRoom = makeButton('1. 进入房间', () => { switchDom(); });
+  const joinRoom = makeButton('1. 进入房间', () => { switchDom(joinRoomDom()); });
 
   // 创建第二个按钮（创建房间）
   const createRoom = makeButton('2. 创建房间', () => { switchDom(); });

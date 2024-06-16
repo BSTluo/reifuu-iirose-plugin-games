@@ -34,11 +34,12 @@ const msgDom = document.querySelector('#msgholder > div:nth-child(1) > div');
 
 const switchDomOrigin = () => {
   let oldDom
-  return (/**@type {Element} */dom) => {
-    if (oldDom != null) {
+  return (/**@type {Element} */dom) => {    
+    if (oldDom) {
+      console.log(true)
       msgDom.replaceChild(dom, oldDom);
     } else {
-
+      console.log(false)
       msgDom.append(dom);
     }
 
