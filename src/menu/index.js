@@ -5,7 +5,7 @@ import { joinRoomDom } from "../joinRoom";
 export const makeMenu = () => {
   // 创建主页面菜单
   const menu = document.createElement('div');
-  menu.style.width = '97vw';
+  menu.style.width = '100vw';
   menu.style.height = '45vh';
   menu.style.background = '#333333';
   menu.style.display = 'flex';

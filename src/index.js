@@ -8,15 +8,19 @@ import { makeMenu } from "./menu";
  * @param {function (): void} canDo 可以执行时执行此函数
  * @param {boolean} [immediate]
  */
-function intervalTry(callback, interval, canDo, immediate = false) {
+function intervalTry(callback, interval, canDo, immediate = false)
+{
   let countOfCall = 0;
   let startTime = Date.now();
   let intervalId = null;
-  let func = (() => {
+  let func = (() =>
+  {
     countOfCall++;
-    try {
+    try
+    {
       callback(countOfCall, Date.now() - startTime);
-      if (intervalId != null) {
+      if (intervalId != null)
+      {
         clearInterval(intervalId);
       }
 
@@ -32,40 +36,48 @@ function intervalTry(callback, interval, canDo, immediate = false) {
 
 const msgDom = document.querySelector('#msgholder > div:nth-child(1) > div');
 
-const switchDomOrigin = () => {
-  let oldDom
-  return (/**@type {Element} */dom) => {    
-    if (oldDom) {
-      console.log(true)
+const switchDomOrigin = () =>
+{
+  let oldDom;
+  return (/**@type {Element} */dom) =>
+  {
+    if (oldDom)
+    {
+
       msgDom.replaceChild(dom, oldDom);
-    } else {
-      console.log(false)
+    } else
+    {
       msgDom.append(dom);
     }
 
     oldDom = dom;
-  }
-}
+  };
+};
 
 export const switchDom = switchDomOrigin();
 
-intervalTry(() => {
+intervalTry(() =>
+{
   window.socket._onmessage.bind;
   if (msgDom.childNodes.length <= 0) { throw 'error'; }
   msgDom.innerHTML = '';
 
-}, 100, () => {
-  const pageListObserver = new MutationObserver(mutationsList => {
+}, 100, () =>
+{
+  const pageListObserver = new MutationObserver(mutationsList =>
+  {
     // @ts-ignore
-
     const /**@type {Element} */ addList = mutationsList[0].addedNodes;
-    addList.forEach((/**@type {Element} */element) => {
+
+    addList.forEach((/**@type {Element} */element) =>
+    {
       if (element.className == 'msg' || element.className == 'pubMsgTime') { element.remove(); }
     });
   });
   pageListObserver.observe(msgDom, { characterData: true, childList: true, subtree: true });
 
-  switchDom(makeMenu())
+  switchDom(makeMenu());
+  msgDom.style.paddingLeft = '0px';
 });
 
 // 加入每局需要花钞
