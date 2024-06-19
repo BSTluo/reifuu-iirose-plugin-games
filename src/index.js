@@ -1,4 +1,4 @@
-import { makeMenu } from "./menu";
+import { menu } from "./menu";
 
 /**
  * 定义循环尝试运行
@@ -76,8 +76,10 @@ intervalTry(() =>
   });
   pageListObserver.observe(msgDom, { characterData: true, childList: true, subtree: true });
 
-  switchDom(makeMenu());
   msgDom.style.paddingLeft = '0px';
+
+  // 运行主页面事件
+  menu();
 });
 
 // 加入每局需要花钞
