@@ -77,7 +77,8 @@ intervalTry(() =>
   pageListObserver.observe(msgDom, { characterData: true, childList: true, subtree: true });
 
   msgDom.style.paddingLeft = '0px';
-
+  msgDom.style.paddingRight = "0px";
+  
   // 运行主页面事件
   menu();
 });
