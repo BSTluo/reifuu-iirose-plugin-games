@@ -5,7 +5,6 @@ import { partingLine } from "../element/partingLine";
 // 主页面事件
 export const menu = () =>
 {
-
   // 创建主页面外部框体
   const menu = document.createElement('div');
   menu.style.width = '100%';
