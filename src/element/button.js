@@ -1,4 +1,4 @@
-import { switchDom } from "..";
+import { switchDom } from "../index.js";
 
 // 构建一个创建按钮的函数
 export const makeButton = (text, callback) => {

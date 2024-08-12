@@ -1,6 +1,6 @@
-import { makeButton } from "../element/button";
-import { switchDom } from "..";
-import { partingLine } from "../element/partingLine";
+import { makeButton } from "../element/button.js";
+import { switchDom } from "../index.js";
+import { partingLine } from "../element/partingLine.js";
 
 // 主页面事件
 export const menu = () =>
