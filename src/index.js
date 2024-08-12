@@ -1,4 +1,4 @@
-import { menu } from "./menu";
+import { menu } from "./menu/index.js";
 
 /**
  * 定义循环尝试运行
