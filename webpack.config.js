@@ -65,7 +65,7 @@ export default (env, argv) => ({
     allowedHosts: "all",
     server: "https",
     client: {
-      webSocketURL: "wss://localhost:8080/ws",
+      webSocketURL: "wss://localhost:8081/ws",
       progress: true,
       reconnect: true,
       overlay: false,

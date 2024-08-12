@@ -1,4 +1,5 @@
 import { menu } from "./menu/index.js";
+import Menu from "./menu/ui.jsx";
 
 /**
  * 定义循环尝试运行
@@ -62,7 +63,7 @@ intervalTry(() =>
   if (msgDom.childNodes.length <= 0) { throw 'error'; }
   msgDom.innerHTML = '';
 
-}, 100, () =>
+}, 1000, () =>
 {
   const pageListObserver = new MutationObserver(mutationsList =>
   {
@@ -71,6 +72,8 @@ intervalTry(() =>
 
     addList.forEach((/**@type {Element} */element) =>
     {
+      // render(Menu(), msgDom);
+
       if (element.className == 'msg' || element.className == 'pubMsgTime') { element.remove(); }
     });
   });
@@ -80,7 +83,8 @@ intervalTry(() =>
   msgDom.style.paddingRight = "0px";
 
   // 运行主页面事件
-  menu();
+  Menu(msgDom);
+  // menu();
 });
 
 // 加入每局需要花钞

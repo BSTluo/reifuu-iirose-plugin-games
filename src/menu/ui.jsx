@@ -1,9 +1,9 @@
-import style from './style.css'
-import { render, h } from 'preact'
-import { useState } from 'preact/hooks'
-import partingLine from '../element/partingLine.jsx'
+import style from './style.css';
+import partingLine from '../element/partingLine.jsx';
+import { h, render } from 'preact';
 
-const Menu = () => {
+const Menu = () =>
+{
   return (
     <div class={style.menu}>
       <div class={style.view}>
@@ -13,5 +13,10 @@ const Menu = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default (ref) =>
+{
+  render(<Menu />, ref);
+};
