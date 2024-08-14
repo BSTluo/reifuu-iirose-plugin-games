@@ -1,4 +1,3 @@
-import { menu } from "./menu/index.js";
 import Menu from "./menu/ui.jsx";
 
 /**
