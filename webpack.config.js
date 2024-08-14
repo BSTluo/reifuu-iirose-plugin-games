@@ -32,18 +32,6 @@ export default (env, argv) => ({
         },
       },
       {
-        test: /\.css$/,
-        use: [
-          "style-loader",
-          {
-            loader: "css-loader",
-            options: {
-              modules: true,
-            },
-          },
-        ],
-      },
-      {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
@@ -65,7 +53,7 @@ export default (env, argv) => ({
     allowedHosts: "all",
     server: "https",
     client: {
-      webSocketURL: "wss://localhost:8081/ws",
+      webSocketURL: "wss://localhost:8080/ws",
       progress: true,
       reconnect: true,
       overlay: false,

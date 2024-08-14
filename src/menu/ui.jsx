@@ -1,14 +1,14 @@
-import style from './style.css';
+import style from './style.jsx';
 import partingLine from '../element/partingLine.jsx';
 import { h, render } from 'preact';
 
 const Menu = () =>
 {
   return (
-    <div class={style.menu}>
-      <div class={style.view}>
-        <div class={style.logo}></div>
-        <div class={style.title}>
+    <div style={style.menu}>
+      <div style={style.view}>
+        <div style={style.logo}></div>
+        <div style={style.title}>
           <partingLine />
         </div>
       </div>
