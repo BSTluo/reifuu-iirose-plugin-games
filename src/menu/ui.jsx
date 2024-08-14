@@ -5,10 +5,10 @@ import { h, render } from 'preact';
 const Menu = () =>
 {
   return (
-    <div class={style.menu}>
-      <div class={style.view}>
-        <div class={style.logo}></div>
-        <div class={style.title}>
+    <div className={style.menu}>
+      <div className={style.view}>
+        <div className={style.logo}></div>
+        <div className={style.title}>
           <partingLine />
         </div>
       </div>
